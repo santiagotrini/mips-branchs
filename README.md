@@ -16,7 +16,7 @@ Es que en lenguaje ensamblador si uno quiere modificar el flujo de un programa, 
 
 Trabajar con _jumps_ en MIPS es simple. Un salto o _jump_ es cuando cambiamos el valor del PC de manera **incondicional**. El primer programa de ejemplo implementa un ciclo infinito que imprime potencias de dos.
 
-```
+```asm
 #############################################
 ### Ejecutar paso a paso! Bucle infinito! ###
 #############################################
@@ -67,7 +67,7 @@ Los _branchs_ disponibles en MIPS son:
 
 Si arreglamos el programa anterior para que el bucle no sea infinito, sino que imprima las primeras 10 potencias nos quedaría de la siguiente manera.
 
-```
+```asm
 .data
 new_line: .asciiz "\n"   # para poner cada potencia en una nueva linea
 
@@ -96,7 +96,7 @@ En este programa usamos un contador para salir del _loop_ aunque también podrí
 
 Vemos que en _assembler_ no hay una diferencia tan clara entre un bucle y un condicional. La implementación de estas dos estructuras de control se realizan con las mismas instrucciones. Veamos un tercer ejemplo con un condicional.
 
-```
+```asm
 .data
 prompt: .asciiz "Ingrese un numero\n"    # prompt string
 es_par: .asciiz "El numero es par\n"     # es_par string
